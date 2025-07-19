@@ -46,7 +46,7 @@ export default function Category() {
                 {
                     category.map((cat, index) => {return <div style={{transform: `translateX(-${slide * 100}%)`}} className='w-[150px] shrink-0 duration-500' key={index}>
                         <img 
-                                  src={`https://swiapi.vercel.app/public/images/${cat.image}`} 
+                                  src={`https://swiapi.vercel.app/images/${cat.image}`} 
                                   alt={cat.name || 'category'} 
                                 />
                         </div>})
