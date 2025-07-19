@@ -22,7 +22,7 @@ export default function topRest() {
     }
     const fetchCategory = async () =>
     {
-        const response = await fetch("http://localhost:5000/top-restaurant-chains");
+        const response = await fetch("https://swiapi.vercel.app/top-restaurant-chains");
         const data = await response.json();
         setCategory(data);
     }
