@@ -22,7 +22,7 @@ export default function Category() {
 
     const fetchCategory = async () =>
     {
-        const response = await fetch("http://localhost:5000/categories");
+        const response = await fetch("https://swiapi.vercel.app/api/categories");
         const data = await response.json();
         setCategory(data);
     }
@@ -45,7 +45,10 @@ export default function Category() {
             <div className='flex overflow-hidden'>
                 {
                     category.map((cat, index) => {return <div style={{transform: `translateX(-${slide * 100}%)`}} className='w-[150px] shrink-0 duration-500' key={index}>
-                        <img src={"http://localhost:5000/images/"+cat.image}></img>
+                        <img 
+                                  src={`https://swiapi.vercel.app/images/${cat.image}`} 
+                                  alt={cat.name || 'category'} 
+                                />
                         </div>})
                 }
             </div>
