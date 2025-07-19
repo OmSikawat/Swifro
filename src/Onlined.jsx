@@ -31,7 +31,7 @@ export default function Onlined() {
 
     const fetchCategory = async () =>
     {
-        const response = await fetch("https://swiapi.vercel.app/top-restaurant-chains");
+        const response = await fetch("https://swiapi.vercel.app/api/top-restaurant-chains");
         const data = await response.json();
         setCategory(data);
     }
